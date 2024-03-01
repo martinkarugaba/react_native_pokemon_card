@@ -14,19 +14,19 @@ export default function PokemonCard({
         <Text style={styles.name}>{name}</Text>
         <Text style={styles.occupation}>{occupation}</Text>
       </View>
-      <Image
-        source={image}
-        style={styles.image}
-        accessibilityLabel={`${name}`}
-      />
-      <View>
-        <Text>Years of Experience: {yearsOfExperience}</Text>
+      <View style={styles.imageWrapper}>
+        <Image
+          source={image}
+          style={styles.image}
+          accessibilityLabel={`${name}`}
+        />
       </View>
-      <View>
-        <Text>Skills: {skills.join(', ')}</Text>
-      </View>
-      <View>
-        <Text>Hourly Rate: ${hourlyRate}</Text>
+      <View style={styles.infoWrapper}>
+        <Text style={styles.experience}>
+          Years of Experience: {yearsOfExperience}
+        </Text>
+        <Text style={styles.skills}>Skills: {skills.join(', ')}</Text>
+        <Text style={styles.hourlyRate}>Hourly Rate: ${hourlyRate}/hr</Text>
       </View>
     </View>
   );
@@ -65,12 +65,34 @@ const styles = StyleSheet.create({
   occupation: {
     fontSize: 22,
   },
+  imageWrapper: {
+    alignItems: 'center',
+  },
   image: {
-    width: '100%',
+    width: '80%',
     height: 350,
-    marginBottom: 16,
-    borderWidth: 2,
+    marginBottom: 30,
     borderColor: 'blue',
     resizeMode: 'contain',
+  },
+  infoWrapper: {
+    flexDirection: 'column',
+    alignItems: 'center',
+    marginBottom: 16,
+  },
+  experience: {
+    fontSize: 18,
+    marginBottom: 4,
+    fontWeight: '500',
+  },
+  skills: {
+    fontSize: 18,
+    marginBottom: 4,
+    fontWeight: '500',
+  },
+  hourlyRate: {
+    fontSize: 18,
+    marginBottom: 4,
+    fontWeight: '500',
   },
 });
