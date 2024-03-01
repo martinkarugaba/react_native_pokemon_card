@@ -1,6 +1,11 @@
-import { StyleSheet, SafeAreaView, Platform, image } from 'react-native';
+import {
+  StyleSheet,
+  SafeAreaView,
+  Platform,
+  image,
+  ScrollView,
+} from 'react-native';
 import PokemonCard from './components/PokemonCard';
-import { StatusBar } from 'expo-status-bar';
 
 export default function App() {
   const alex = {
@@ -35,9 +40,11 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <PokemonCard {...carlos} />
-      <PokemonCard {...alex} />
-      <PokemonCard {...elena} />
+      <ScrollView style={styles.scrollView}>
+        <PokemonCard {...carlos} />
+        <PokemonCard {...alex} />
+        <PokemonCard {...elena} />
+      </ScrollView>
     </SafeAreaView>
   );
 }
@@ -45,7 +52,11 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#333',
+    alignItems: 'center',
     paddingTop: Platform.OS === 'android' ? 25 : 0,
+  },
+  scrollView: {
+    width: '100%',
+    paddingHorizontal: 140,
   },
 });

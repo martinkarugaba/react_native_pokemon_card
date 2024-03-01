@@ -36,7 +36,6 @@ const styles = StyleSheet.create({
   card: {
     backgroundColor: 'white',
     borderRadius: 16,
-    borderWidth: 2,
     padding: 16,
     margin: 16,
     ...Platform.select({
@@ -53,7 +52,7 @@ const styles = StyleSheet.create({
     }),
   },
   nameContainer: {
-    flexDirection: 'row',
+    alignItems: 'center',
     justifyContent: 'space-between',
     marginBottom: 32,
   },
