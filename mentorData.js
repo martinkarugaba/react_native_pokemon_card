@@ -1,0 +1,58 @@
+const mentors = [
+  {
+    id: 1,
+    name: 'John Doe',
+    image: 'john.jpg',
+    occupation: 'Software Engineer',
+    yearsOfExperience: 5,
+    skills: ['JavaScript', 'React', 'Node.js'],
+    hourlyRate: 50,
+  },
+  {
+    id: 2,
+    name: 'Jane Smith',
+    image: 'jane.jpg',
+    occupation: 'UI/UX Designer',
+    yearsOfExperience: 3,
+    skills: ['UI Design', 'Wireframing', 'Prototyping'],
+    hourlyRate: 40,
+  },
+  {
+    id: 3,
+    name: 'David Johnson',
+    image: 'david.jpg',
+    occupation: 'Data Scientist',
+    yearsOfExperience: 7,
+    skills: ['Python', 'Machine Learning', 'Data Analysis'],
+    hourlyRate: 60,
+  },
+  {
+    id: 4,
+    name: 'Sarah Williams',
+    image: 'sarah.jpg',
+    occupation: 'Full Stack Developer',
+    yearsOfExperience: 4,
+    skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js'],
+    hourlyRate: 45,
+  },
+  {
+    id: 5,
+    name: 'Michael Brown',
+    image: 'michael.jpg',
+    occupation: 'Mobile App Developer',
+    yearsOfExperience: 6,
+    skills: ['React Native', 'JavaScript', 'Firebase'],
+    hourlyRate: 55,
+  },
+  {
+    id: 6,
+    name: 'Emily Davis',
+    image: 'emily.jpg',
+    occupation: 'Frontend Developer',
+    yearsOfExperience: 2,
+    skills: ['HTML', 'CSS', 'JavaScript', 'React'],
+    hourlyRate: 35,
+  },
+];
+
+export default mentors;
